@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: green;
+    padding-top:15px;
+    padding-bottom:15px;
+    position:absolute;
+    bottom:0;
+
+    h1 {
+        margin:0;
+        text-align: center;
+        color:white;
+    }
+}

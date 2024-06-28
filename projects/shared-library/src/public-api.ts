@@ -11,6 +11,6 @@ export * from './lib/msal/msal.utils';
 export * from './lib/store/actions';
 export * from './lib/store/selectors';
 export * from './lib/store/utils';
-
-
+export * from './lib/footer/footer.component'
+export * from './lib/sidebar/sidebar.component'
 
