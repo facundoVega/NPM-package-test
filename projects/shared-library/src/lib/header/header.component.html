@@ -1,4 +1,7 @@
 <div class="header">
-    <h1>Library Header</h1>
-    {{ $user | async }}
+    <div class="div-logo">
+        
+    </div>
+    <div class="div-menu"><h1>Library Header Menu</h1> <span>{{ $user | async }}</span> </div>
+    <div class="div-sides"><button (click)='logout()'>Logout</button> </div>
 </div>

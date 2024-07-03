@@ -3,7 +3,7 @@ import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { activeUSer } from "../store/selectors";
 import { CommonModule } from "@angular/common";
-
+import { MsalCustomService } from "../msal/msalCustom.service";
 @Component({
     selector: 'header-component',
     standalone: true,
@@ -12,6 +12,11 @@ import { CommonModule } from "@angular/common";
     styleUrl: './header.component.scss'
   })
   export class HeaderComponent implements OnInit {
+
+    private msalCustomService: MsalCustomService | undefined;
+    constructor(msalCustomService: MsalCustomService) {
+      this.msalCustomService = msalCustomService;
+    }
     @Input() store!: Store;
     $user!: Observable<string | undefined>
     ngOnInit(): void {
@@ -19,5 +24,11 @@ import { CommonModule } from "@angular/common";
         this.$user =  this.store.select(activeUSer)
       }
       
+    }
+
+    logout(): void {
+      if (this.msalCustomService) {
+        this.msalCustomService.logout();
+      }
     }
   }

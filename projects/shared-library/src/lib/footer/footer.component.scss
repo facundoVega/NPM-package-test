@@ -1,15 +1,18 @@
 .footer {
     width: 100%;
     box-sizing: border-box;
-    background-color: green;
+    background-color: #fff;
     padding-top:15px;
     padding-bottom:15px;
     position:absolute;
     bottom:0;
+    border-top:1px solid #e3e3e3;
+    padding-left: 40px;
+    z-index: 99;
 
-    h1 {
+    .footer-text{
         margin:0;
         text-align: center;
-        color:white;
+        color:#545454
     }
 }
